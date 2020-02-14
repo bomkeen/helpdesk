@@ -1,0 +1,21 @@
+====================
+การติดตั้ง
+ให้สร้าง Database Encode เป็น UTF-8 
+แล้ว Excute ไฟล์ SQL  hosinfo_helpdesk.sql จาก Folder DB 
+
+====================
+ตั้งค่า Databae 
+เข้าไปที่ Folder helpdesk -> common -> config
+เปิดไฟล์ main-local.php แล้วแก้การตั้งค่า
+ 'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=appdb',
+            'username' => 'sa',
+            'password' => 'sa',
+            'charset' => 'utf8',
+        ],
+
+====================
+ระบบแจ้งซ่อมออนไลน์ เป็นระบบที่ผู้แจ้งไม่ต้อง Login แจ้งได้เลย ส่วน admin นั้นจะสามารถแจ้งและลงรายละเอียดได้โดยการ Login
+user : admin
+pass : adminadmin
